@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Option Menu</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+            .SDextended {
+            position: relative;
+            background-color: #fff;
+            color: #000;
+            height: 550px;
+            width: 800px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 58px;
+            border-radius: 100px;
+            margin-bottom: 100px;
+            border: 2px solid #000; 
+            cursor: pointer;
+            font-style: italic;
+            transition: background-color 0.5s;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .SDextended::before {
+    content: 'Lets do it'; /* Replace with your preferred symbol or text */
+    font-size: 30px;
+    color: #000;
+    position: absolute; /* Change to 'fixed' if you want the symbol to stay fixed on the viewport */
+    bottom: 5px; /* Adjust the distance from the bottom as needed */
+    right: 120px; /* Adjust right to place it outside the button */
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.5s;        }
+
+        /* Glow effect on hover */
+        .SDextended:hover {
+            background-color: #3498db; /* Blue, for odd hover */
+            color: white;
+        }
+
+        .SDextended:hover::before {
+            opacity: 1;
+            color: #fff; /* Glow color */
+        }
+
+        /* Dim LED lights */
+        .led-light {
+            width: 25px;
+            height: 30px;
+            background-color: #555;
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: background-color 0.5s, box-shadow 0.5s;
+        }
+
+        .SDextended:hover .led-light {
+           background-color: #008000; /* Green glowing color */
+    box-shadow: 0 0 10px #008000; /* Green box shadow for a glowing effect */        }
+    </style>
+</head>
+<body>
+    <!-- Use the styled link as a button -->
+    <a class="SDextended" href="LearnWavelenght/LearnWavelenght.html">
+        <span class="led-light"></span>
+        <span class="led-light"></span>
+        <span class="led-light"></span>
+             Learn Interactive Wavelength
+    </a>
+
+    <a class="SDextended" href="BreakDownProject/Breakdown.html">
+        <span class="led-light"></span>
+        <span class="led-light"></span>
+        <span class="led-light"></span>
+        Breakdown of our Project (Brief)
+    </a>
+
+    <a class="SDextended" href="GLSCImages/GLSCImages.html">
+        <span class="led-light"></span>
+        <span class="led-light"></span>
+        <span class="led-light"></span>
+        GLSC Project & Display images
+    </a>
+</body>
+</html>

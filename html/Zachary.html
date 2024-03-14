@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zachary's Page</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .styled-heading {
+            font-size: 6rem;
+            font-weight: bold;
+            font-style: italic;
+            text-align: center;
+            color: #50C878;
+            margin: 5px;
+            text-decoration: underline;
+        }
+
+        .styled-text {
+            font-weight: bold;
+            font-style: italic;
+            text-align: center;
+            font-size: 18px;
+            margin: 20px;
+        }
+
+        .quotation-marks {
+            font-size: 24px;
+            color: #50C878;
+        }
+        em {
+            font-size: 1.8rem; /* Adjust the font size as needed */
+            font-style: italic;
+            text-align: center;
+            color: black; /* Adjust the color of the styled text */
+            margin-top: 10px; /* Adjust the margin as needed */
+        }
+
+        .rotator-container {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            border: 2px solid #333;
+            overflow: hidden;
+            margin: auto;
+        }
+
+        .rotator-image {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h4>Group Role &rarr; &#x1F4BB; Team Website Developer &#x1F4BB;</h4>
+
+    <div class="styled-heading">
+        Zachary's Brief Description
+    </div>
+
+    <div class="styled-text">
+       <em> <span class="quotation-marks">"</span>
+        Zachary Mosley uses HTML (Hypertext Markup Language), CSS (Cascading Style Sheets), and JavaScript for the team website of the interactive display. Zachary used extensive knowledge in HTML to determine the buttons and the specifics of the destination. HTML is used in combination with other tools like JavaScript to improve functionality for the user, for example, "hovering-animations." The goal of HTML is to enhance the user's ability to interact with the website. Another part of designing the website is CSS, which allows the HTML scripts to have styles added in addition to the pre-existing functionality. 
+        CSS created the style of the link and provided a more pleasing button for the user. 
+        The website also has advanced scripts, which are functions triggered from interactions like hovering over a button, consistent shadowing (glowing), or image transitions.</em>
+        
+        
+  <span class="quotation-marks">"</div>
+
+    <div class="rotator-container">
+        <img class="rotator-image" src="Screenshots/Zachary1.jpg" alt="Rotating Image">      
+        <img class="rotator-image" src="Screenshots/Zachary2.jpg" alt="Rotating Image">
+        <img class="rotator-image" src="Screenshots/Zachary3.jpg" alt="Rotating Image">
+    </div>
+
+    <p><font size="7">&#9830;</font>Computer Engineer, Zachary<font size="7">&#9830;</font></p>
+
+    <script>
+        const rotatorContainer = document.querySelector('.rotator-container');
+        const rotatorImages = document.querySelectorAll('.rotator-image');
+        let currentImageIndex = 0;
+
+        rotatorImages[currentImageIndex].style.opacity = 1;
+
+        function rotateImage() {
+            rotatorImages[currentImageIndex].style.opacity = 0;
+            currentImageIndex = (currentImageIndex + 1) % rotatorImages.length;
+            rotatorImages[currentImageIndex].style.opacity = 1;
+        }
+
+        setInterval(rotateImage, 2000);
+    </script>
+
+</body>
+
+</html>

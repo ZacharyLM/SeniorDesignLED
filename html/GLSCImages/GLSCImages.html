@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enjoy SD Images</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            font-size: 1.8rem;
+            font-style: italic;
+            text-decoration: underline;
+
+        }
+
+        .rotator-container {
+            position: relative;
+            width: 900px; /* Adjust the container size as needed */
+            height: 700px; /* Adjust the container size as needed */
+            border: 2px solid #333; /* Add a border around the container */
+            overflow: hidden; /* Hide the overflow */
+            margin: auto; /* Center the container */
+        }
+
+        .rotator-image {
+            position: absolute;
+            width: 100%; /* Make the image fill the container */
+            height: 100%; /* Make the image fill the container */
+            opacity: 0; /* Start with zero opacity */
+            transition: opacity 1s ease-in-out; /* Apply fade-in/fade-out effect */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Enjoy Images of our Senior Design</h1>
+    </div>
+
+    <div class="rotator-container">
+         <img class="rotator-image" src="./LED1.jpg" alt="Rotating Image">
+         <img class="rotator-image" src="./LED2.jpg" alt="Rotating Image">
+         <img class="rotator-image" src="./LED3.jpg" alt="Rotating Image">
+         <img class="rotator-image" src="./LED4.jpg" alt="Rotating Image">
+         <img class="rotator-image" src="./LED5.jpg" alt="Rotating Image">
+         <img class="rotator-image" src="./LED6.jpg" alt="Rotating Image">
+         <img class="rotator-image" src="./LED7.jpg" alt="Rotating Image">
+         <img class="rotator-image" src="./LED8.jpg" alt="Rotating Image">
+         <img class="rotator-image" src="./LED9.jpg" alt="Rotating Image">
+    </div>
+
+    <script>
+        const rotatorContainer = document.querySelector('.rotator-container');
+        const rotatorImages = document.querySelectorAll('.rotator-image');
+        let currentImageIndex = 0;
+
+        rotatorImages[currentImageIndex].style.opacity = 1; // Set initial opacity for the first image
+
+        function rotateImage() {
+            rotatorImages[currentImageIndex].style.opacity = 0; // Set opacity to 0 before fading in
+            currentImageIndex = (currentImageIndex + 1) % rotatorImages.length;
+            rotatorImages[currentImageIndex].style.opacity = 1; // Fade in by setting opacity to 1
+        }
+
+        setInterval(rotateImage, 2000); // Adjust the interval as needed (milliseconds)
+    </script>
+</body>
+</html>

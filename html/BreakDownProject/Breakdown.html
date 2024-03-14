@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SD Breakdown</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+
+        .styled-heading {
+            font-size: 5rem; /* Adjust the font size as needed */
+            font-weight: bold;
+            font-style: italic;
+            text-align: center;
+            color: Black; /* Blue color, change to your preferred color */
+            margin: 5px; /* Adjust the margin as needed */
+            text-decoration: underline; /* Underline the text */
+        }
+
+        .styled-text {
+            font-size: 2rem; /* Adjust the font size as needed */
+            font-style: italic;
+            text-align: center;
+            color: black; /* Adjust the color of the styled text */
+            margin-top: 10px; /* Adjust the margin as needed */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .arrow-container {
+            position: relative;
+        }
+
+        .arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 20px solid black;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+               }
+        .image {
+            max-width: 100%;
+            height: 200px;
+            width: 200px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="styled-heading">
+        Breakdown of Project
+    </div>
+    <div class="styled-text">
+        The Overall project is based on the idea of learning wavelengths in a visual, fun, and safe manner. We achieve this
+        by using LEDs that change from a variety of colors depending on how close or far you are. You might ask, "what if no user
+        is near?" and we've added an additional idle LED setting to view. Let's take a look below at the components and bring
+        everything together for a breakdown.
+    </div>
+
+    <div class="container">
+        <div class="arrow-container">
+            <div class="arrow"></div>
+        </div>
+        <div class="styled-text">
+            <p>Below is an image of the Power Supply and Micro-Controller used 
+               power and program the LEDs. The LED's generate plently of heat, when providing the user with maximum light. However, 
+               the power is controlled and maintained at safe voltage levels to prevent burning, blowout or blinding. The Microtroller is used in
+               in combination with ardiuno, which is a programming language resposible for the patterns of the LEDs. The Microcontroller also recieves
+               signals from the Li-Dar Sensor to alternate colors or remain idle.</p>
+        </div>
+        <img src="Power.jpg" alt="Image 1" class="image">
+
+        <div class="arrow-container">
+            <div class="arrow"></div>
+        </div>
+        <div class="styled-text">
+            <p>Below is an image of the prototype, which includes the LED's. The LED's themseleves are programmed to be in sync and required individual
+            testing based off are Software and Hardware Engineer Tyler. The LED's were discussed for not only heat but spacing due to the area we were given 
+            at the GLSC (Great Lake Science Center) and the visual we wanted to provide the user. Lastly, The LED design is also Horizontal for the provided space
+            and wall given. </p>
+        </div>
+        <img src="LED.jpg" alt="Image 2" class="image">
+        
+        <div class="arrow-container">
+            <div class="arrow"></div>
+        </div>
+        <div class="styled-text">
+            <p>Below is the Structure used to hold the acrylic glass, Logan created this structure using "Solidworks" which is widely used in Mechanical Engineering
+             for creating foundations, instruments or any item/object that requires precise measurements. If you look closley you can see the detail of the drilling needed
+             in the first bubble and the struture holder in the second bubble. </p>
+        </div>
+        <img src="Hold1.jpg" alt="Image 3" class="image">
+        
+        <div class="arrow-container">
+            <div class="arrow"></div>
+        </div>
+        <div class="styled-text">
+            <p>Below is a side look of the structure being held with the acrylic glass surrounding the horizontal LED strips</p>
+        </div>
+        <img src="Hold2.jpg" alt="Image 4" class="image">
+    </div>
+</body>
+</html>

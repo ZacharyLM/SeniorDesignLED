@@ -1,0 +1,344 @@
+<html>
+<div style="width:auto">
+<head>
+<title>Senior Design</title>
+<!DOCTYPE html>
+<html lang="en">
+<header>
+<div class="led-container bottom"></div>
+  <div class="led-container">
+  <div class="led"></div>
+  <div class="led"></div>
+  <div class="led"></div>
+  <div class="led"></div>
+  <div class="led"></div>
+  <div class="led"></div>
+  <div class="led"></div>
+  </div>
+
+   <center>
+        <header style="padding: 20px; background-color: lightblue; text-align: center;">
+    <font size="6"> <h1 style="font-family: 'Arial', font-style: 'italic',sans-serif;">Senior Design</h1></font>
+        <font size="4">  <h2 style="font-family: 'Arial',font-style: 'italic',sans-serif;">Exhibit Technology Developer</h2></center></font>
+        
+    </header>
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Image Slider</title>
+</head>
+<body>
+    <div class="slider">
+        <img src="html/Screenshots/image1.jpeg" alt="Image 1">
+        <img src="html/Screenshots/image2.jpg" alt="Image 2">
+        <img src="html/Screenshots/image3.jpg" alt="Image 3">
+        <img src="html/Screenshots/image4.jpeg" alt="Image 4">
+        <img src="html/Screenshots/image5.jpeg" alt="Image 5">
+        <img src="html/Screenshots/image6.jpeg" alt="Image 6">
+    </div>
+             <script src="script.js"></script>
+</body>
+</html>
+<style>
+.slider {
+    width: 100%;
+    max-width: 350px; /* Adjust as needed */
+    margin: 0 auto;
+    overflow: hidden;
+    border: 5px solid #333; /* Add border styling */
+}
+
+.slider img {
+    width: 100%;
+    height: auto;
+    
+}
+.led-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  position: absolute; /* Adjust as needed */
+  z-index: 1; /* Background color for contrast */
+}
+
+.led {
+  position: relative;
+  width: 15px; /* Adjust the size of the LED */
+  height: 15px; /* Adjust the size of the LED */
+  border-radius: 50%; /* Makes the divs circular */
+  background-color: #ff0000; /* Initial color of the LED (red in this case) */
+  animation: changeColor 2s infinite, glow 2s infinite; /* Color change and glow animations */
+}
+
+.top {
+  top: 0;
+}
+
+.bottom {
+  bottom: 0;
+}
+
+@keyframes changeColor {
+  0% {
+    background-color: #ff0000; /* Red */
+  }
+  33.33% {
+    background-color: #00ff00; /* Green */
+  }
+  66.66% {
+    background-color: #0000ff; /* Blue */
+  }
+  100% {
+    background-color: #ff0000; /* Back to Red */
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px 5px rgba(255, 0, 0, 0.7); /* Red glow effect */
+  }
+  33.33% {
+    box-shadow: 0 0 5px 5px rgba(0, 255, 0, 0.7); /* Green glow effect */
+  }
+  66.66% {
+    box-shadow: 0 0 5px 5px rgba(0, 0, 255, 0.7); /* Blue glow effect */
+  }
+  100% {
+    box-shadow: 0 0 5px 5px rgba(255, 0, 0, 0.7); /* Back to Red glow effect */
+  }
+}
+
+</style>
+<script>
+const sliderImages = document.querySelectorAll('.slider img');
+let currentImageIndex = 0;
+
+function showImage(index) {
+    sliderImages.forEach(image => {
+        image.style.display = 'none';
+    });
+
+    sliderImages[index].style.display = 'block';
+}
+
+function nextImage() {
+    currentImageIndex = (currentImageIndex + 1) % sliderImages.length;
+    showImage(currentImageIndex);
+}
+
+// Initially show the first image
+showImage(currentImageIndex);
+
+// Change image every few seconds (adjust the interval as needed)
+setInterval(nextImage, 2000); // Switch to the next image every 3 seconds
+
+</script>
+<p><center>
+<p><h1>Updated for Prototype (3/18/2024)</h1>
+<p><h2>NOTE:The Website is still under development</h2></center>
+</head>
+<body>
+
+<h3>
+    <ul>
+        <p></a>
+            
+                    
+                                           
+</h3>
+</div>
+</body>
+</html>
+<center>
+<!DOCTYPE html>
+<html>
+ <footer style="padding: 40px; background-color: lightblue; text-align: center;">
+<head>
+    <title>Button-Style Link</title>
+    <style>
+        /* Style the link to look like a button */
+        .Zachary {
+         background-color: #fff;
+            color: #000;
+            height: 40px;
+            width: 120px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 50px;
+            border-radius: 25px;
+            margin-right: 30px;
+            border: 2px solid #000; 
+            cursor: pointer;
+            font-style: italic;
+            transition: background-color 2s;
+
+        }
+
+        /* Add hover effect */
+        .Zachary:hover {
+            background-color: #50C878;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Use the styled link as a button -->
+    <a class="Zachary" href="html/Zachary.html">Zachary Mosley</a>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button-Style Link</title>
+    <style>
+        /* Style the link to look like a button */
+        .Lilian {
+            background-color: #fff;
+            color: #000;
+            height: 40px;
+            width: 120px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 50px;
+            border-radius: 25px;
+             margin-right: 30px;
+            border: 2px solid #000; 
+            cursor: pointer;
+            font-style: italic;
+            transition: background-color 2s;
+        }
+
+        /* Add hover effect */
+        .Lilian:hover {
+            background-color: #FFC0CB;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Use the styled link as a button -->
+    <a class="Lilian" href="html/Lillian.html">Lillian Chan</a>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button-Style Link</title>
+    <style>
+        /* Style the link to look like a button */
+        .Tyler {
+            background-color: #fff;
+            color: #000;
+            height: 40px;
+            width: 120px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 50px;
+            border-radius: 25px;
+            border: 2px solid #000; 
+            cursor: pointer;
+             margin-right: 10px;
+            font-style: italic;
+            transition: background-color 2s;
+        }
+
+        /* Add hover effect */
+        .Tyler:hover {
+            background-color: #4682B4;
+            color:white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Use the styled link as a button -->
+    <a class="Tyler" href="html/Tyler.html">Tyler Carr</a>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button-Style Link</title>
+    <style>
+        /* Style the link to look like a button */
+        .Logan {
+            background-color: #fff;
+            color: #000;
+            height: 40px;
+            width: 120px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 50px;
+            border-radius: 25px;
+            margin-left: 20px;
+            border: 2px solid #000; 
+            cursor: pointer;
+            font-style: italic;
+            transition: background-color 2s;
+        }
+
+        /* Add hover effect */
+        .Logan:hover {
+            background-color: #FF7518;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Use the styled link as a button -->
+    <a class="Logan" href="html/Logan.html">Logan Kendall</a>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button-Style Link</title>
+    <style>
+        /* Style the link to look like a button */
+        .Senior_Design {
+            background-color: #fff;
+            color: #000;
+            height: 40px;
+            width: 120px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 50px;
+            border-radius: 25px;
+             margin-left: 100px;
+            border: 2px solid #000; 
+            cursor: pointer;
+            font-style: italic;
+            transition: background-color 2s;
+        }
+
+        /* Add hover effect */
+        .Senior_Design:hover {
+            background-color: #080808;
+            color:white; 
+                  
+        }
+    </style>
+</head>
+<body>
+    <!-- Use the styled link as a button -->
+    <a class="Senior_Design" href="html/Senior Design.html">Senior Design, Details and Breakdowns</a>
+</body>
+</html>
+  <div class="led-container bottom"></div>
+  <div class="led-container">
+  <div class="led"></div>
+  <div class="led"></div>
+  <div class="led"></div>
+  <div class="led"></div>
+  <div class="led"></div>
+  <div class="led"></div>
+  <div class="led"></div>
+  </div>
+
+</center>
+   </footer>

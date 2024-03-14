@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logan's Page</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .styled-heading {
+            font-size: 6rem;
+            font-weight: bold;
+            font-style: italic;
+            text-align: center;
+            color: orange;
+            margin: 5px;
+            text-decoration: underline;
+        }
+
+        .styled-text {
+            font-weight: bold;
+            font-style: italic;
+            text-align: center;
+            font-size: 18px;
+            margin: 20px;
+        }
+        em {
+            font-size: 1.8rem; /* Adjust the font size as needed */
+            font-style: italic;
+            text-align: center;
+            color: black; /* Adjust the color of the styled text */
+            margin-top: 10px; /* Adjust the margin as needed */
+        }
+
+        .quotation-marks {
+            font-size: 24px;
+            color: orange;
+        }
+
+        .rotator-container {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            border: 2px solid #333;
+            overflow: hidden;
+            margin: auto;
+        }
+
+        .rotator-image {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h4>Group Role &rarr; &#x1F6E0; Structure Builder and Mount Designer &#x1F6E0;</h4>
+
+    <div class="styled-heading">
+        Logan's Brief Description
+    </div>
+
+    <div class="styled-text">
+       <em> <span class="quotation-marks">"</span>
+        Logan Kendall's previous Z-Bar design serves as the LED's main mounting structure, ensuring the design is held and displayed properly. He's using Solidworks to accomplish the design of this structure and faced challenging decisions regarding how the Z-Bar implementation could help diffuse the LEDs' light, ensuring they are not too bright for safe and enjoyable viewing. 
+        The design area provided has drywall, allowing for drilled-in mounted support. 
+        The nearly 16-foot design structure is built to hold 40 lbs, providing a high safety margin that can easily support 15 pounds worth of LED strips. 
+        The Z-Bar design effectively diffuses the emitted light, providing a pleasing visual experience for users interacting with the display.
+
+The updated Design 3/5 required Logan's design to accommodate holding the LEDs, ESP32 (microcontroller), power supply, and acrylic glass to protect the LEDs. The images below will showcase a variety of Logan's Solidworks schematics to achieve this updated structure, also previous ideas such as the Z-Bar.</em>
+        
+        
+<span class="quotation-marks">"</div>
+
+    <div class="rotator-container">
+        <img class="rotator-image" src="Screenshots/Logan1.jpg" alt="Rotating Image">      
+        <img class="rotator-image" src="Screenshots/Logan2.jpg" alt="Rotating Image">
+        <img class="rotator-image" src="Screenshots/Logan3.jpg" alt="Rotating Image">
+        <img class="rotator-image" src="Screenshots/Logan4.jpg" alt="Rotating Image">
+        <img class="rotator-image" src="Screenshots/Logan5.jpg" alt="Rotating Image">
+        <img class="rotator-image" src="Screenshots/Logan6.jpg" alt="Rotating Image">
+    </div>
+
+    <p><font size="7">&#9830;</font>Mechanical Engineer, Logan<font size="7">&#9830;</font></p>
+
+    <script>
+        const rotatorContainer = document.querySelector('.rotator-container');
+        const rotatorImages = document.querySelectorAll('.rotator-image');
+        let currentImageIndex = 0;
+
+        rotatorImages[currentImageIndex].style.opacity = 1;
+
+        function rotateImage() {
+            rotatorImages[currentImageIndex].style.opacity = 0;
+            currentImageIndex = (currentImageIndex + 1) % rotatorImages.length;
+            rotatorImages[currentImageIndex].style.opacity = 1;
+        }
+
+        setInterval(rotateImage, 2000);
+    </script>
+
+</body>
+
+</html>
